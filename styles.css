@@ -1,0 +1,671 @@
+:root {
+    --primary-color: #5a5041;
+    --secondary-color: #fce1b8;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --bg-color: #fce1b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 2rem;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffac2c;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #ffac2c;
+}
+
+.hero p span {
+    color: #16644e;
+    font-weight: 500;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #d9cdb0;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c4b69a;
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 2rem;
+    background-color: var(--light-bg);
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Generator Section */
+.generator-section {
+    padding: 5rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.form-container {
+    position: relative;
+    background-image: url('backgroundh.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15rem 2rem 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    min-height: 1000px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Gender Section with Template Preview */
+.gender-section {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.gender-inputs {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.template-preview {
+    position: absolute;
+    left: 20px;
+    top: 120%;
+    transform: translateY(-50%);
+    width: 250px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.preview-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    margin-right: 400px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0 5px;
+}
+
+.radio-group label {
+    color: var(--primary-color);
+    font-weight: 500;
+    
+    margin-left: 30px;
+}
+
+/* Add space for the last radio option */
+.radio-group label:last-child {
+    
+    margin-left: 30px;
+}
+
+/* Gender section label */
+.gender-inputs > label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button[type="submit"] {
+    background-color: #16644e;
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 8rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #124e3d;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Language Toggle */
+.language-toggle button {
+    background: none;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-toggle button:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .form-container {
+        flex-direction: column;
+        padding: 8rem 2rem 2rem;
+    }
+    
+    .form-images {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .hero-content {
+        max-width: 80%;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 0.95rem;
+    }
+    
+    .template-preview {
+        width: 220px;
+    }
+    
+    .title-decoration h2 {
+        font-size: 26px;
+        padding-top: 150px;
+    }
+    
+    .title-decoration h2 span {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 5rem 1.5rem 1.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .form-container {
+        padding: 6rem 1.5rem 1.5rem;
+        min-height: 800px;
+    }
+    
+    .form-images {
+        grid-template-columns: 1fr;
+    }
+
+    .gender-section {
+        position: relative;
+    }
+
+    .template-preview {
+        width: 120px;
+    }
+
+    .gender-inputs {
+        padding-left: 15px;
+    }
+    
+    .title-decoration h2 {
+        font-size: 22px;
+        padding-top: 120px;
+    }
+    
+    .title-decoration h2 span {
+        font-size: 20px;
+    }
+    
+    button[type="submit"] {
+        padding: 0.9rem 1.5rem;
+        margin-bottom: 5rem;
+    }
+    
+    .generator-section {
+        padding: 4rem 1rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 4rem 1rem 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 0.85rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-container {
+        padding: 6rem 1rem 1rem;
+        min-height: 700px;
+    }
+    
+    .title-decoration h2 {
+        font-size: 20px;
+        padding-top: 80px;
+    }
+    
+    .title-decoration h2 span {
+        font-size: 18px;
+    }
+    
+    .title-decoration {
+        margin-bottom: 2rem;
+    }
+    
+    input[type="text"] {
+        padding: 0.8rem;
+    }
+    
+    .gender-inputs > label {
+        margin-bottom: 8px;
+    }
+    
+    .radio-group {
+        flex-wrap: wrap;
+    }
+    
+    .radio-group label {
+        margin-bottom: 10px;
+    }
+    
+    button[type="submit"] {
+        padding: 0.8rem 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-section {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .gender-inputs {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .form-container {
+        padding: 3rem 0.8rem 1rem;
+    }
+    
+    .title-decoration h2 {
+        font-size: 18px;
+        padding-top: 60px;
+    }
+    
+    .title-decoration h2 span {
+        font-size: 16px;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Certificate Preview */
+#certificatePreview {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#certificatePreview.hidden {
+    display: none;
+}
+
+#certificateContainer {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+#certificateContainer canvas {
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto;
+}
+
+#downloadCertificate {
+    display: block;
+    margin: 1rem auto;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#downloadCertificate:hover {
+    background-color: #c0392b;
+}
+
+/* Remove the Features section as it's no longer needed */
+.features, .features-grid, .feature-card {
+    display: none;
+}
+
+/* Title Decoration */
+.title-decoration {
+    position: relative;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.title-decoration h2 {
+    color: var(--primary-color);
+    font-size: 30px;
+    margin-bottom: 1rem;
+    padding-top: 200px;
+}
+
+.title-decoration h2 span {
+    color: #16644e;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* Bottom Right Decoration */
+.bottom-right-image {
+    display: none;
+}
+
+/* Add space between labels and text inputs only */
+label[for="fullName"], label[for="signature"] {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Base label styling */
+label {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Form elements RTL support */
+input[type="text"] {
+    text-align: right;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.3s ease;
+    direction: rtl;
+}
+
+input[type="text"]::placeholder {
+    color: #666;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #124e3d;
+    background-color: #fddeb5;
+}
+
+/* RTL specific adjustments */
+[dir="rtl"] .form-container {
+    text-align: right;
+}
+
+[dir="rtl"] .radio-group {
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .radio-group label {
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+[dir="rtl"] .template-preview {
+    right: 20px;
+    left: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    .template-preview {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 1rem auto;
+    }
+
+    #certificateContainer canvas {
+        max-width: 100%;
+        height: auto !important;
+    }
+}
