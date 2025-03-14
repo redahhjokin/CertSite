@@ -373,8 +373,10 @@ footer {
     }
     
     .form-container {
-        padding: 6rem 1.5rem 1.5rem;
-        min-height: 800px;
+        padding: 2rem;
+        min-height: auto;
+        background-size: cover;
+        background-position: center;
     }
     
     .form-images {
@@ -382,15 +384,25 @@ footer {
     }
 
     .gender-section {
-        position: relative;
+        margin: 2rem 0;
     }
 
     .template-preview {
-        width: 120px;
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 1rem auto;
+        display: none; /* Hide the preview on mobile */
     }
 
     .gender-inputs {
-        padding-left: 15px;
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 1rem;
     }
     
     .title-decoration h2 {
@@ -403,8 +415,9 @@ footer {
     }
     
     button[type="submit"] {
-        padding: 0.9rem 1.5rem;
-        margin-bottom: 5rem;
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
     }
     
     .generator-section {
@@ -413,6 +426,53 @@ footer {
     
     .container {
         padding: 0 1rem;
+    }
+
+    .radio-group {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .radio-group label {
+        margin: 0;
+    }
+
+    #certificatePreview {
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    #certificateContainer {
+        margin: 1rem 0;
+        padding: 0;
+    }
+
+    #certificateContainer canvas {
+        max-width: 100%;
+        height: auto !important;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    input[type="text"] {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    #downloadCertificate {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
     }
 }
 
@@ -646,26 +706,22 @@ input[type="text"]:focus {
     left: auto;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
     .form-container {
-        padding: 2rem;
-        min-height: auto;
+        padding: 1.5rem;
     }
 
-    .template-preview {
-        position: relative;
-        left: auto;
-        right: auto;
-        top: auto;
-        transform: none;
-        width: 100%;
-        max-width: 300px;
-        margin: 1rem auto;
-    }
-
-    #certificateContainer canvas {
-        max-width: 100%;
-        height: auto !important;
+    .title-decoration h2 {
+        font-size: 1.5rem;
+        line-height: 1.4;
     }
 }
